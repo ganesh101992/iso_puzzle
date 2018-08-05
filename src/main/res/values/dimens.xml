@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="node_radius">35sp</dimen>
+    <dimen name="node_parent_radius">37sp</dimen>
+
+    <dimen name="button_width">100sp</dimen>
+    <dimen name="button_height">35sp</dimen>
+
+    <dimen name="cavity_edges_height">10sp</dimen>
+    <dimen name="cavity_edges_stroke">4sp</dimen>
+</resources>

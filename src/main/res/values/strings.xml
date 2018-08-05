@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iso</string>
+    <string name="Answer">Next Move</string>
+    <string name="Done">Next</string>
+    <string name="Help">?</string>
+    <string name="HelpClose">X</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+      <integer name="node_radius_size">35</integer>
+      <integer name="node_parent_size">37</integer>
+
+      <integer name="button_width_size">150</integer>
+      <integer name="button_height_size">40</integer>
+
+      <integer name="node_edges_height">12</integer>
+</resources>
