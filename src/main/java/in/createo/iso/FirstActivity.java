@@ -401,7 +401,7 @@ public class FirstActivity extends Activity {
                 }
                 if(i==number_of_nodes)
                 {
-                    if(current_data<9) {
+                    if(current_data<8) {
                         findViewById(R.id.button_done).setAlpha(1.0f);
                         matched = 1;
                     }
