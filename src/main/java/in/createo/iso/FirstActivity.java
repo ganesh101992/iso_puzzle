@@ -44,7 +44,7 @@ public class FirstActivity extends Activity {
     private ArrayList<ArrayList<Integer>> reference_matrix_copy = new ArrayList<ArrayList<Integer>>();
     private ArrayList<ArrayList<Integer>> combinational_matrix_copy = new ArrayList<ArrayList<Integer>>();
     private ArrayList<String> edges_names = new ArrayList<>();
-    private int v1, v2;
+    private int v1, v2, json_data_size;
     private int number_of_nodes = 0, current_data = 0;
     private int node_radius, node_parent_radius, cavity_edge_height;
     private float current_x, current_y;
@@ -258,6 +258,7 @@ public class FirstActivity extends Activity {
             json_str = new String(buffer, "UTF-8");
 
             json = new JSONArray(json_str);
+            json_data_size=json.length();
             number_of_nodes = json.getJSONObject(current_data).getInt("no_nodes");
             JSONArray json_arr = (json.getJSONObject(current_data).getJSONArray("reference_matrix"));
             ArrayList<Integer> header = new ArrayList<>();
@@ -401,7 +402,7 @@ public class FirstActivity extends Activity {
                 }
                 if(i==number_of_nodes)
                 {
-                    if(current_data<8) {
+                    if(current_data<(json_data_size-1)) {
                         findViewById(R.id.button_done).setAlpha(1.0f);
                         matched = 1;
                     }
@@ -618,12 +619,13 @@ public class FirstActivity extends Activity {
                     int img_id = getResources().getIdentifier(img, "mipmap", getPackageName());
                     i.setImageResource(img_id);
                     r.addView(i);
-                    TextView v = new TextView(FirstActivity.this);
-                    l = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-                    v.setLayoutParams(l);
-                    v.setTextSize(23.0f);
-                    v.setText("<->");
-                    r.addView(v);
+                    i = new ImageView(FirstActivity.this);
+                    l = new LayoutParams(2*node_radius, 2*node_radius);
+                    i.setLayoutParams(l);
+                    img = "swap";
+                    img_id = getResources().getIdentifier(img, "mipmap", getPackageName());
+                    i.setImageResource(img_id);
+                    r.addView(i);
                     i = new ImageView(FirstActivity.this);
                     l = new LayoutParams(2*node_radius, 2*node_radius);
                     i.setLayoutParams(l);

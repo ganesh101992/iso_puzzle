@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         android:gravity="top|left"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:visibility="gone">
 
         <LinearLayout
             android:id="@+id/button_solution_parent"
@@ -77,8 +78,7 @@
         android:id="@+id/help_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/help"
-        tools:visibility="gone">
+        android:background="@drawable/help">
 
         <LinearLayout
             android:layout_width="44dp"
@@ -99,79 +99,85 @@
                 android:textAllCaps="false" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="286dp"
-            android:layout_height="36dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center|bottom"
-            android:layout_marginTop="93dp"
-            android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="301dp"
+            android:layout_centerInParent="true">
 
-            <TextView
-                android:layout_width="219dp"
-                android:layout_height="35dp"
-                android:layout_gravity="top"
-                android:gravity="center"
-                android:text="Swap red numbered bulloons..." />
+            <LinearLayout
+                android:layout_width="278dp"
+                android:layout_height="33dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="87dp"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="38dp"
-                android:layout_height="37dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@mipmap/node1" />
+                <TextView
+                    android:layout_width="231dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="top"
+                    android:gravity="center"
+                    android:text="Swap red numbered bulloons..." />
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="26sp"
+                    android:layout_height="26sp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/node1" />
 
-        <LinearLayout
-            android:layout_width="286dp"
-            android:layout_height="45dp"
-            android:layout_centerInParent="true"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="182dp"
-                android:layout_height="45dp"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:text="...so that all the red strings..." />
+            <LinearLayout
+                android:layout_width="288dp"
+                android:layout_height="46dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="69dp"
-                android:layout_height="@dimen/cavity_edges_stroke"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="15sp"
-                android:background="@color/colorEdge"
-                android:gravity="center" />
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="left"
+                    android:gravity="center"
+                    android:text="...so that all the red strings..." />
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="68dp"
+                    android:layout_height="@dimen/cavity_edges_stroke"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="15sp"
+                    android:background="@color/colorEdge"
+                    android:gravity="center" />
 
-        <LinearLayout
-            android:layout_width="377dp"
-            android:layout_height="45dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="86dp"
-            android:orientation="horizontal">
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="267dp"
-                android:layout_height="45dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginEnd="25dp"
-                android:gravity="center"
-                android:text="...are covered with a protective layer." />
+            <LinearLayout
+                android:layout_width="377dp"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="82dp"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="69dp"
-                android:layout_height="13sp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="-25sp"
-                android:background="@drawable/cavity_edges_help" />
+                <TextView
+                    android:layout_width="292dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="25dp"
+                    android:gravity="center"
+                    android:text="...are covered with a protective layer." />
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="66dp"
+                    android:layout_height="13sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-25sp"
+                    android:background="@drawable/cavity_edges_help" />
+
+            </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 
